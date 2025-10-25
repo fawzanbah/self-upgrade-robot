@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: self-upgrade-robot
+    env: python
+    Plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app

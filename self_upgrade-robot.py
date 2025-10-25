@@ -8,7 +8,7 @@ import threading
 import time
 
 class SelfUpgradeRobot:
-    def _init_(self, skills_folder="skills"):
+    def __init__(self, skills_folder="skills"):
         self.skills_folder = Path(skills_folder)
         self.skills_folder.mkdir(exist_ok=True)
         self.loaded_modules = {}
