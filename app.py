@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from self_upgrade_robot import SelfUpgradeRobot
 
-app = Flask(_name_)
+app = Flask(__name__)
 robot = SelfUpgradeRobot()
 
 @app.route("/")
@@ -36,7 +36,7 @@ def command():
 
     return jsonify({"message": "❌ Unknown command."})
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
